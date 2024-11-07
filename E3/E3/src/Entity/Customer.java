@@ -5,6 +5,8 @@ public class Customer {
     private String cus_name;
     private String cus_phone;
 
+    public Customer() {;}
+
     public Customer(int id, String cus_name, String cus_phone) {
         this.id = id;
         this.cus_name = cus_name;
@@ -33,5 +35,14 @@ public class Customer {
 
     public void setCus_phone(String cus_phone) {
         this.cus_phone = cus_phone;
+    }
+
+    @Override
+    public String toString() {
+        return "Customer{" +
+                "id=" + id +
+                ", cus_name='" + cus_name + '\'' +
+                ", cus_phone='" + cus_phone + '\'' +
+                '}';
     }
 }

@@ -4,15 +4,17 @@ import java.time.LocalDateTime;
 
 public class Booking {
     private int id;
-    private String room_id;
-    private String cus_id;
+    private String roomId;
+    private String customerId;
     private LocalDateTime checkIn;
     private LocalDateTime checkOut;
 
-    public Booking(int id, String room_id, String cus_id, LocalDateTime checkIn, LocalDateTime checkOut) {
+    public Booking() {;}
+
+    public Booking(int id, String roomId, String customerId, LocalDateTime checkIn, LocalDateTime checkOut) {
         this.id = id;
-        this.room_id = room_id;
-        this.cus_id = cus_id;
+        this.roomId = roomId;
+        this.customerId = customerId;
         this.checkIn = checkIn;
         this.checkOut = checkOut;
     }
@@ -25,20 +27,20 @@ public class Booking {
         this.id = id;
     }
 
-    public String getRoom_id() {
-        return room_id;
+    public String getRoomId() {
+        return roomId;
     }
 
-    public void setRoom_id(String room_id) {
-        this.room_id = room_id;
+    public void setRoomId(String roomId) {
+        this.roomId = roomId;
     }
 
-    public String getCus_id() {
-        return cus_id;
+    public String getCustomerId() {
+        return customerId;
     }
 
-    public void setCus_id(String cus_id) {
-        this.cus_id = cus_id;
+    public void setCustomerId(String customerId) {
+        this.customerId = customerId;
     }
 
     public LocalDateTime getCheckIn() {
@@ -56,4 +58,16 @@ public class Booking {
     public void setCheckOut(LocalDateTime checkOut) {
         this.checkOut = checkOut;
     }
+
+    @Override
+    public String toString() {
+        return "Booking{" +
+                "id=" + id +
+                ", roomId='" + roomId + '\'' +
+                ", customerId='" + customerId + '\'' +
+                ", checkIn=" + checkIn +
+                ", checkOut=" + checkOut +
+                '}';
+    }
 }
+
