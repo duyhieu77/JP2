@@ -1,2 +1,0 @@
-ProductId; %Click; %AddToCart; %CheckOut; Date
-1;100.00;0.00;0.00;2024-02-25
